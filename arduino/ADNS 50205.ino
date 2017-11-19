@@ -20,7 +20,7 @@ void loop() {
   for (int i=0;i<225;i++){
       img[i]=readLoc(0x0b);
       img[i] &= 0x7F;
-      img[i]+=1;//if there is 0 value, part of udp package is lost
+      img[i]+=1;
       Serial.print(img[i], DEC);
       Serial.print(",");
       delay(2);
